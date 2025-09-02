@@ -1,0 +1,110 @@
+/* Contenedor principal con fondo degradado */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #4b0082, #ff8c00);
+  color: #333;
+}
+
+/* Encabezado */
+header {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #1a1a1a;
+}
+
+/* Contenido principal */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffffcc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Secciones */
+section {
+  margin-bottom: 30px;
+}
+
+h2, h3 {
+  color: #b22222;
+  margin-bottom: 10px;
+}
+
+/* Botones */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #b22222;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #8b0000;
+}
+
+/* Controles */
+.controls, .summary-controls, .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+/* Textareas alineadas */
+textarea {
+  width: 100%;
+  min-height: 150px;
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Select y botón alineados */
+.summary-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.summary-controls select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  min-width: 150px;
+}
+
+.summary-controls button {
+  flex: 1;
+  min-width: 150px;
+}
+
+/* Información del modelo */
+.model-info {
+  text-align: center;
+  font-size: 0.95em;
+  color: #444;
+}

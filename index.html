@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voz a Texto + Resumen con IA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🔊 Voz a Texto + Resumen con IA</h1>
+  </header>
+
+  <main>
+    <section class="voice-section">
+      <h2>🎙️ Grabación de Voz</h2>
+      <div class="controls">
+        <button id="startBtn">Iniciar Grabación</button>
+        <button id="pauseBtn">Pausar Grabación</button>
+        <button id="stopBtn">Detener Grabación</button>
+        <button id="clearBtn">Limpiar Texto</button>
+      </div>
+      <p id="status">⏳ Estado: esperando acción...</p>
+    </section>
+
+    <section class="text-section">
+      <h2>📝 Texto Transcrito</h2>
+      <textarea id="transcript" placeholder="El texto transcrito aparecerá aquí..."></textarea>
+    </section>
+
+    <section class="summary-section">
+      <h2>🤖 Resumen con IA</h2>
+      <div class="summary-controls">
+        <label for="detailLevel">Nivel de compresión:</label>
+        <select id="detailLevel">
+          <option value="25">25% (Muy breve)</option>
+          <option value="50" selected>50% (Medio)</option>
+          <option value="75">75% (Detallado)</option>
+        </select>
+
+        <label for="summaryStyle">Estilo de resumen:</label>
+        <select id="summaryStyle">
+          <option value="normal">Normal</option>
+          <option value="reformulado">Reformulado</option>
+          <option value="simplificado">Simplificado</option>
+        </select>
+
+        <button id="generateSummaryBtn">Generar Resumen</button>
+      </div>
+
+      <textarea id="summaryOutput" readonly placeholder="Aquí aparecerá el resumen generado..."></textarea>
+      <p id="wordCount"></p>
+
+      <div class="actions">
+        <button id="copySummaryBtn">Copiar</button>
+        <button id="exportSummaryBtn">Exportar .txt</button>
+      </div>
+    </section>
+
+    <section class="model-info">
+      <h3>ℹ️ Información del Modelo</h3>
+      <p>Este sistema utiliza Hugging Face para generar resúmenes inteligentes en español. Puedes ajustar el nivel y el estilo para obtener resultados personalizados.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
